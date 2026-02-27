@@ -5,7 +5,7 @@
 
 // Use relative URLs to leverage Vite proxy, or fallback to environment variable
 const API_BASE_URL = import.meta.env.VITE_API_URL || "";
-
+console.log("API BASE URL:", this.baseUrl);
 interface ApiResponse<T> {
   data?: T;
   error?: string;
@@ -344,3 +344,4 @@ export interface AnalyzeResult {
 
 export const api = new ApiClient(API_BASE_URL);
 export default api;
+
