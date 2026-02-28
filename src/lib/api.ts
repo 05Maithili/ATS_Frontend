@@ -4,7 +4,7 @@
  */
 
 // Use relative URLs to leverage Vite proxy, or fallback to environment variable
-const API_BASE_URL = import.meta.env.VITE_API_URL || "";
+const API_BASE_URL = "https://ats-backend-1-tdue.onrender.com";
 console.log("API BASE URL:", API_BASE_URL);
 interface ApiResponse<T> {
   data?: T;
@@ -344,5 +344,6 @@ export interface AnalyzeResult {
 
 export const api = new ApiClient(API_BASE_URL);
 export default api;
+
 
 
